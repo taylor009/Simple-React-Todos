@@ -9,7 +9,6 @@ const app: Express = express()
 const PORT: string | number = process.env.PORT || 4000
 
 app.use(cors())
-app.use(bodyParser.json())
 app.use(todoRoutes)
 
 const uri: string = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.zib9fwk.mongodb.net/?retryWrites=true&w=majority`
